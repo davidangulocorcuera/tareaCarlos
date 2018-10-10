@@ -9,12 +9,37 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var textField_user: UITextField!
+    @IBOutlet weak var textField_password: UITextField!
+    @IBOutlet weak var btn_login: UIButton!
+    let my_user = "david"
+    let my_password = "12345"
+    let alert = UIAlertController(title: "Alert", message: "hi", preferredStyle: UIAlertControllerStyle.alert)
+    
     override func viewDidLoad() {
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
         super.viewDidLoad()
-
+        btn_login.layer.cornerRadius = 10
+        btn_login.layer.borderColor = UIColor.white.cgColor
+        btn_login.layer.borderWidth = 2.0
+        
         // Do any additional setup after loading the view.
     }
+    @IBAction func login(){
+        if (textField_user.text == my_user && textField_password.text == my_password){
+            showSeriesVC()
+           
+        }
+        
+    }
+    private func showSeriesVC(){
+        let seriesVC  = SeriesViewController()
+        let navigationController = UINavigationController(rootViewController: seriesVC)
+        navigationController.modalTransitionStyle = .flipHorizontal
+        present(navigationController,animated: true,completion: nil)
+    }
+   
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

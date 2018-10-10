@@ -7,3 +7,14 @@
 //
 
 import Foundation
+class Actors{
+    var str_name: String!
+    var str_image: String!
+   
+    
+    init(str_name: String,str_image: String){
+        self.str_name = str_name
+        self.str_image = str_image
+       
+    }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="cellActors" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellActors" id="KGk-i7-Jjw" customClass="ActorsTableViewCell" customModule="Series" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v0e-dA-3Pm">
+                        <rect key="frame" x="0.0" y="0.0" width="74" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="9p1-78-MIf"/>
+                            <constraint firstAttribute="height" constant="44" id="hRH-kv-Rbo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlB-sc-092">
+                        <rect key="frame" x="96" y="12" width="214" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Chx-td-a0p"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v0e-dA-3Pm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="M9E-Kv-fJd"/>
+                    <constraint firstItem="SlB-sc-092" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TPr-6M-801"/>
+                    <constraint firstItem="v0e-dA-3Pm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YW6-VV-gxy"/>
+                    <constraint firstItem="SlB-sc-092" firstAttribute="leading" secondItem="v0e-dA-3Pm" secondAttribute="trailing" constant="22" id="pPm-N5-8Iy"/>
+                    <constraint firstAttribute="trailing" secondItem="SlB-sc-092" secondAttribute="trailing" constant="10" id="wJ3-4E-nqA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageViewAvatar" destination="v0e-dA-3Pm" id="jtw-Qd-yQ3"/>
+                <outlet property="lblName" destination="SlB-sc-092" id="Jmc-on-FhK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
